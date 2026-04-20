@@ -138,32 +138,58 @@
     <div class="particle-layer" id="particle-container"></div>
 
       <div class="hub-content" style="position: relative; z-index: 10;">
-        <section class="about">
-          <div class="section-header" style="padding: 100px 20px;"> 
-            <div class="tag" style="margin-bottom: 30px;">Projects?</div>
-            <h2 style="font-size: 2.5rem; line-height: 1.3; max-width: 800px; margin: 0 auto 40px auto; color: white;">Site in progress. Do not continue.</h2>
-
-            <p class="description">
-              Uhhhh, Lorem Ipsum?
-            </p>
-            
-            <p class="description">
-              The Collegium of Minds is not just a club—it is an open intellectual space for anyone driven by curiosity rather than conformity. 
-              It exists for those who believe that learning is a lifelong process, and that the most meaningful questions often have no immediate or final answers.
-            </p>
-
-            <p class="description">
-              CoM functions as a decentralized laboratory of ideas. It brings together individuals from different backgrounds, disciplines, and stages of life to explore thought without rigid boundaries. 
-              Here, science meets philosophy, technology intersects with society, and abstract theories are examined for their real-world relevance.
-            </p>
-
-            <p class="description">
-              From discussions on physics, space, and artificial intelligence to reflections on history, ethics, and human progress, CoM encourages depth over speed and understanding over memorization. 
-              The emphasis is not on credentials or titles, but on clarity of thought, intellectual honesty, and the courage to question assumptions.
-            </p>
-            
-          </div>
+  
+        <section class="projects-intro" style="padding: 100px 20px; text-align: center;">
+          <div class="tag" style="margin-bottom: 20px; border-color: #03e3fc; color: #03e3fc;">Laboratory Log</div>
+          <h2 style="font-size: 2.8rem; line-height: 1.2; color: white; margin-bottom: 30px; font-family: 'Orbitron', sans-serif;">Active Inquiries & Initiatives</h2>
+          <p class="description" style="max-width: 750px; margin: 0 auto; font-size: 1.1rem; opacity: 0.8;">
+            The Collegium does not just build tools; we build understanding. Our projects are collaborative efforts to map the unknown, whether through software, mathematical logic, or rigorous community dialogue.
+          </p>
         </section>
+      
+        <section class="project-grid" style="max-width: 1200px; margin: 0 auto; padding: 0 20px 100px 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+          
+          <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(3, 252, 165, 0.3); padding: 40px; border-radius: 4px; backdrop-filter: blur(10px); position: relative; overflow: hidden;">
+            <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #03fca5;"></div>
+            <div style="font-family: 'Orbitron'; font-size: 0.7rem; color: #03fca5; margin-bottom: 10px; letter-spacing: 2px;">ID: COM-LOG-01 // STATUS: ACTIVE</div>
+            <h3 style="color: white; font-size: 1.6rem; margin-bottom: 15px; font-family: 'Orbitron';">The Dialogues</h3>
+            <p style="color: rgba(255,255,255,0.6); line-height: 1.6; margin-bottom: 25px; font-size: 0.95rem;">
+              The heart of CoM. We host recurring deep-dives into topics ranging from Fermi’s Paradox to Ethics in AGI. These discussions are later synthesized into the CoM Notebook.
+            </p>
+            <button class="button-outline" style="font-size: 0.8rem; border-color: #03fca5; color: #03fca5;" onclick="location.href='contact.html'">Join the Thread</button>
+          </div>
+      
+          <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(3, 227, 252, 0.3); padding: 40px; border-radius: 4px; backdrop-filter: blur(10px); position: relative; overflow: hidden;">
+            <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #03e3fc;"></div>
+            <div style="font-family: 'Orbitron'; font-size: 0.7rem; color: #03e3fc; margin-bottom: 10px; letter-spacing: 2px;">ID: COM-DEV-02 // STATUS: PROTOTYPE</div>
+            <h3 style="color: white; font-size: 1.6rem; margin-bottom: 15px; font-family: 'Orbitron';">Project IRIS</h3>
+            <p style="color: rgba(255,255,255,0.6); line-height: 1.6; margin-bottom: 25px; font-size: 0.95rem;">
+              Information Reasoning & Integrity Scanner. An experimental initiative aimed at developing logic-based frameworks to identify fallacies and misinformation in digital discourse.
+            </p>
+            <button class="button-outline" style="font-size: 0.8rem; border-color: #03e3fc; color: #03e3fc;">View Specs</button>
+          </div>
+      
+          <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.2); padding: 40px; border-radius: 4px; backdrop-filter: blur(10px); position: relative; overflow: hidden;">
+            <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #fff;"></div>
+            <div style="font-family: 'Orbitron'; font-size: 0.7rem; color: #fff; margin-bottom: 10px; letter-spacing: 2px;">ID: COM-CUR-03 // STATUS: RECRUITING</div>
+            <h3 style="color: white; font-size: 1.6rem; margin-bottom: 15px; font-family: 'Orbitron';">The Polymath Path</h3>
+            <p style="color: rgba(255,255,255,0.6); line-height: 1.6; margin-bottom: 25px; font-size: 0.95rem;">
+              A community-curated open syllabus for self-directed learners. We are mapping the essential resources required to master diverse fields from Astrophysics to Philosophy.
+            </p>
+            <button class="button-outline" style="font-size: 0.8rem;">Contribute</button>
+          </div>
+      
+        </section>
+      
+        <hr class="section-divider">
+      
+        <section style="padding: 100px 20px; text-align: center; background: rgba(3, 227, 252, 0.03);">
+          <h2 style="font-family: 'Orbitron'; color: white; margin-bottom: 15px;">Have an Inquiry?</h2>
+          <p style="color: rgba(255,255,255,0.6); margin-bottom: 30px;">The Collegium is a work in progress, shaped by the questions <u>you</u> bring to the table.</p>
+          <button class="button-outline" style="padding: 15px 40px;" onclick="location.href='contact.html'">Propose a Project</button>
+        </section>
+      
+      </div>
 
         <hr class="section-divider">
             
