@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Collegium of Minds</title>
+<meta name="title" content="The Collegium of Minds">
+<meta name="description" content="Think. Explore. Discover. A community for curious thinkers and lifelong learners.">
+  
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://collegium137.vercel.app/">
+<meta property="og:title" content="The Collegium of Minds">
+<meta property="og:description" content="Think. Explore. Discover. A community for curious thinkers and lifelong learners.">
+<meta property="og:image" content="https://collegium137.vercel.app/Comm.png">
+
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="Comm.png">
+</head>
+<body>
+
+<div class="navbar" id="navbar">
+  <div class="navbar-container">
+    <div class="navbar-logo" onclick="location.href='https://collegium137.vercel.app/'">
+      <div class="beaker"><img src='Comm.png' style="width:30px; height:30px;"></div>
+      <span class="navbar-logo-text">The Collegium Of Minds</span>
+    </div>
+    <div class="navbar-links" id="navbar-links">
+      <a href="about.html">About</a>
+      <a href="library.html">Library</a>
+      <a href="projects.html">Projects</a>
+      <a href="events.html">Events</a>
+      <a href="contact.html" class="cta-nav">Join Us</a>
+    </div>
+  </div>
+</div>
+
+<main>
+  <section id="home">
+    <div class="hero" id="hero">
+      <canvas id="starfield" style="position: absolute; inset: 0; z-index: -1;"></canvas>
+      <div class="grid"></div>
+      <div class="orb" style="width:400px; height:400px; left:10%; top:20%; background: radial-gradient(circle, #03e3fc40 0%, transparent 70%); animation: float1 20s infinite alternate;"></div>
+      <div class="orb" style="width:300px; height:300px; left:80%; top:60%; background: radial-gradient(circle, #03fca540 0%, transparent 70%); animation: float2 25s infinite alternate;"></div>
+
+      <div class="title" id="title">
+        <div class="tag" style="display: table; margin: 0 auto 20px auto;">EST. 2025</div>
+        <h1 style="display: block;">The Collegium</h1>
+        <h2 style="display: block;">Of Minds</h2>
+        <p>A community for curious thinkers and lifelong learners.</p>
+        <div class="hero-btns" style="display: flex; gap: 15px; justify-content: center;">
+            <button class="button-outline" onclick="location.href = 'contact.html'">Join the Network</button>
+        </div>
+      </div>
+
+      <div class="floating-cards">
+        <div class="card" style="left:15%; top:25%;">🔬</div>
+        <div class="card" style="left:85%; top:35%;">⚛️</div>
+        <div class="card" style="left:10%; top:75%;">🧬</div>
+        <div class="card" style="left:90%; top:70%;">🚀</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="intellectual-hub" style="position: relative; background: #000; overflow: hidden; width: 100%;">
+    
+    <div class="bg-blob" style="width: 700px; height: 700px; top: -10%; left: -5%; background: rgba(3, 227, 252, 0.25);"></div>
+    <div class="bg-blob" style="width: 600px; height: 600px; top: 25%; right: -10%; background: rgba(3, 252, 165, 0.2);"></div>
+    <div class="bg-blob" style="width: 500px; height: 500px; top: 50%; left: -15%; background: rgba(3, 102, 252, 0.15);"></div>
+    <div class="bg-blob" style="width: 800px; height: 800px; bottom: -10%; right: 5%; background: rgba(3, 227, 252, 0.2);"></div>
+
+    <div class="particle-layer" id="particle-container"></div>
+
+      <div class="hub-content" style="position: relative; z-index: 10;">
+        <section class="brief-about">
+          <div class="section-header">
+            <div class="tag">The Vision</div>
+            <h2>Think. Explore. Discover.</h2>
+            <p class="description">
+              The Collegium of Minds welcomes individuals passionate about exploring science 🔬, mathematics ➗, philosophy 🧠, literature 📚, history 🏛️, technology 💻, arts 🎨, and beyond. Here, ideas are shared, questions are celebrated, and minds come together to discover, discuss, and innovate 💡. Join us in a space where curiosity knows no bounds.
+            </p>
+            <div class="center-btn" style="margin-top: 30px;">
+              <button class="button-outline" onclick="location.href='about.html'">More About Us</button>
+            </div>
+          </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <section class="teaser-grid">
+          <div class="teaser-card" onclick="location.href='about.html'">
+              <div class="tag">Knowledge</div>
+              <h3>The Digital Library</h3>
+              <p>Lorem Ipsum...</p>
+              <span class="link-arrow">Read Articles →</span>
+          </div>
+
+          <div class="teaser-card" onclick="location.href='projects.html'">
+              <div class="tag">Action</div>
+              <h3>Our Initiatives</h3>
+              <p>Lorem Ipsum again...</p>
+              <span class="link-arrow">Explore Projects →</span>
+          </div>
+
+          <div class="teaser-card" onclick="location.href='events.html'">
+              <div class="tag">The Lab</div>
+              <h3>Events & Quizzes</h3>
+              <p>I really don't know what to put yet... Lorem Ipsum, I guess...</p>
+              <span class="link-arrow">See Calendar →</span>
+          </div>
+        </section>
+      </div> 
+  </div> 
+</main>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <div class="navbar-logo">
+                <div class="beaker"><img src='Comm.png' style="width:22px; height:22px;"></div>
+                <span class="navbar-logo-text" style="font-size: 1.1rem;">The Collegium Of Minds</span>
+            </div>
+            <p class="footer-tagline">A community for curious thinkers and lifelong learners.</p>
+            <div class="footer-socials">
+                <a href="https://com-137.github.io/com137">Hub</a>
+                <a href="https://thecollegiumofminds.substack.com">Substack</a>
+                <a href="https://www.youtube.com/@TheCollegiumofMinds">YouTube</a>
+              <a href="https://medium.com/@collegiumofminds">Medium</a>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <div class="link-group">
+                <h4>Navigation</h4>
+                <a href="about.html">Library</a>
+                <a href="projects.html">Projects</a>
+                <a href="events.html">Events</a>
+            </div>
+            <div class="link-group">
+                <h4>Community</h4>
+                <a href="contact.html">Join Us</a>
+                <a href="#">Newsletter</a>
+                <a href="#">Conduct</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p class="copyright-text">&copy; 2026 The Collegium of Minds. Think. Explore. Discover.</p>
+        <div class="footer-status">
+            <span class="status-dot"></span> <span style="opacity: 0.6;">System Calibrating. Site under construction.</span>
+        </div>
+    </div>
+</footer>
+
+  
+<script>
+  // Smooth Navbar reveal
+  window.addEventListener('load', () => {
+    const navbar = document.getElementById('navbar');
+    navbar.style.top = '0';
+    navbar.style.opacity = '1';
+  });
+
+  // Parallax Hero
+  window.addEventListener('scroll', () => {
+    const scroll = window.scrollY;
+    document.getElementById('title').style.transform = `translateY(${scroll * 0.2}px)`;
+    document.querySelector('.grid').style.transform = `translateY(${scroll * 0.1}px)`;
+  });
+
+
+// ---------- Pure Hero Starfield ----------
+const starCanvas = document.getElementById('starfield');
+const sctx = starCanvas.getContext('2d');
+let stars = [];
+const numStars = 400; // Dense enough to look good
+
+function resizeStarCanvas() {
+    starCanvas.width = window.innerWidth;
+    starCanvas.height = window.innerHeight;
+}
+window.addEventListener('resize', resizeStarCanvas);
+resizeStarCanvas();
+
+// Initialize stars
+for (let i = 0; i < numStars; i++) {
+    stars.push({
+        x: Math.random() * starCanvas.width,
+        y: Math.random() * starCanvas.height,
+        size: Math.random() * 1.5 + 0.5,
+        speed: Math.random() * 0.8 + 0.2, // Parallax speed
+        alpha: Math.random(),
+        twinkling: Math.random() * 0.02
+    });
+}
+
+function drawStars() {
+    // We use a semi-transparent clear to avoid streaks
+    sctx.fillStyle = '#000'; // Match your site's black
+    sctx.fillRect(0, 0, starCanvas.width, starCanvas.height);
+    
+    stars.forEach(star => {
+        // Subtle twinkling effect
+        star.alpha += star.twinkling;
+        if (star.alpha <= 0.2 || star.alpha >= 1) star.twinkling *= -1;
+
+        sctx.fillStyle = `rgba(255, 255, 255, ${Math.abs(star.alpha)})`;
+        sctx.beginPath();
+        sctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
+        sctx.fill();
+
+        // Move downwards
+        star.y += star.speed;
+
+        // Loop back to top
+        if (star.y > starCanvas.height) {
+            star.y = -5;
+            star.x = Math.random() * starCanvas.width;
+        }
+    });
+}
+
+// Separate Animation Loop for Stars
+function animateStars() {
+    drawStars();
+    requestAnimationFrame(animateStars);
+}
+animateStars();
+  
+
+const container = document.getElementById('particle-container');
+const symbols = ['α', 'β', 'γ', 'Δ', 'δ', 'ε', 'ζ', 'η', 'θ', 'λ', 'μ', 'π', 'ρ', 'Σ', 'σ', 'Ψ', 'ω', 'ℏ', '∞', 'H', 'O', 'C', 'N', 'Fe', 'Au', 'U'];
+
+if (container) {
+    for (let i = 0; i < 100; i++) {
+        const isSymbol = Math.random() > 0.5;
+        const el = document.createElement('div');
+        
+        el.style.position = 'absolute';
+        el.style.left = Math.random() * 100 + '%';
+        el.style.animation = `deepFall ${Math.random() * 10 + 10}s linear infinite`;
+        el.style.animationDelay = `-${Math.random() * 20}s`;
+        el.style.opacity = Math.random() * 0.4 + 0.1;
+        el.style.color = 'rgba(3, 227, 252, 0.4)';
+
+        if (isSymbol) {
+            el.innerText = symbols[Math.floor(Math.random() * symbols.length)];
+            el.style.fontSize = (Math.random() * 1.5 + 1) + 'rem';
+            el.style.fontFamily = 'Orbitron, sans-serif';
+        } else {
+            const size = Math.random() * 4 + 1 + 'px';
+            el.style.width = size;
+            el.style.height = size;
+            el.style.backgroundColor = '#03e3fc';
+            el.style.borderRadius = '50%';
+        }
+        container.appendChild(el);
+    }
+}
+  
+</script>
+
+</body>
+</html>
