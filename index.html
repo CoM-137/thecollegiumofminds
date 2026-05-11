@@ -93,8 +93,8 @@
     z-index: 0;
     pointer-events: none;
     background-image:
-      linear-gradient(rgba(3,227,252,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(3,227,252,0.04) 1px, transparent 1px);
+      linear-gradient(rgba(3,227,252,0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(3,227,252,0.08) 1px, transparent 1px);
     background-size: 60px 60px;
   }
 
@@ -123,13 +123,19 @@
   }
 
   .nav-brand {
+    font-weight: bold;
+    background: linear-gradient(to right, #03e3fc, #03fca5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     display: flex;
     align-items: center;
     gap: 14px;
     text-decoration: none;
     transition: opacity 0.2s;
+    font-size: 1.5rem;
+    transition: transform 0.3s;
   }
-  .nav-brand:hover { opacity: 0.8; }
+  .nav-brand:hover { transform: scale(1.05);}
 
   .nav-logo-mark {
     width: 38px; height: 38px;
@@ -144,9 +150,9 @@
     letter-spacing: 0.5px;
   }
 
-  .nav-text { display: flex; flex-direction: column; gap: 1px; }
+  .nav-text { display: flex; flex-direction: column; gap: 1px}
   .nav-eyebrow { font-size: 0.65rem; font-weight: 300; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; font-family: 'Orbitron', sans-serif; }
-  .nav-name { font-family: 'Orbitron', sans-serif; font-size: 0.8rem; font-weight: 700; color: var(--text); letter-spacing: 0.5px; }
+  .nav-name { font-family: 'Orbitron', sans-serif; font-size: 1.25rem; font-weight: 700; color: var(--text); letter-spacing: 0.5px; }
 
   .nav-links {
     display: flex;
@@ -156,14 +162,40 @@
   }
 
   .nav-links a {
-    color: var(--muted);
+    color: rgba(255, 255, 255, 0.7);;
     text-decoration: none;
-    font-size: 0.82rem;
+    font-size: 1rem;
     font-weight: 300;
     letter-spacing: 0.5px;
-    transition: color 0.2s;
+    display: inline-block;
+    position: relative;
+    transition:
+        color 0.3s,
+        transform 0.3s;
   }
-  .nav-links a:hover { color: var(--text); }
+  .nav-links a:not(.nav-cta):hover { 
+    color: #03e3fc; 
+    transform: translateY(-3px);
+  }
+  .nav-links a:not(.nav-cta)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+
+    width: 100%;
+    height: 1px;
+
+    background: #03e3fc;
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition: transform 0.3s ease;
+}
+.nav-links a:not(.nav-cta):hover::after {
+    transform: scaleX(1);
+}
 
   .nav-cta {
     font-family: 'Orbitron', sans-serif !important;
@@ -191,14 +223,14 @@
   .hero {
     position: relative;
     min-height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 120px 24px 80px;
+    padding: 70px 24px 80px;
     z-index: 10;
-    overflow: hidden;
   }
 
   .hero-est {
@@ -213,24 +245,25 @@
   }
 
   .hero-badge {
+    font-family: 'Orbitron', sans-serif;
     display: inline-block;
-    border: 0.5px solid var(--cyan-border);
+    border: 2px solid var(--cyan);
     background: var(--cyan-dim);
     color: var(--cyan);
     font-size: 0.75rem;
-    font-weight: 400;
+    font-weight: 600;
     padding: 7px 22px;
     border-radius: 100px;
     letter-spacing: 0.3px;
-    margin-bottom: 44px;
+    margin-bottom: 25px;
     animation: fadeUp 1s 0.4s both;
   }
 
   .hero-h1 {
     font-family: 'Orbitron', sans-serif;
     font-weight: 900;
-    font-size: clamp(3.5rem, 10vw, 9rem);
-    line-height: 0.9;
+    font-size: clamp(3rem, 10vw, 7rem);
+    line-height: 1.25;
     letter-spacing: -2px;
     margin-bottom: 20px;
     animation: fadeUp 1s 0.6s both;
@@ -250,7 +283,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-size: 0.55em;
+    font-size: 0.75em;
     letter-spacing: 4px;
     font-weight: 700;
     margin-top: 16px;
@@ -259,10 +292,10 @@
   .hero-sub {
     max-width: 640px;
     color: var(--muted);
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 300;
-    line-height: 1.8;
-    margin: 32px auto 48px;
+    line-height: 1;
+    margin: 15px auto 48px;
     animation: fadeUp 1s 0.8s both;
   }
 
@@ -313,8 +346,8 @@
 
   .hero-scroll {
     position: absolute;
-    bottom: 40px;
-    left: 50%;
+    bottom: 10px;
+    left: 45%;
     transform: translateX(-50%);
     display: flex;
     flex-direction: column;
@@ -333,6 +366,38 @@
     animation: scrollPulse 2s ease-in-out infinite;
   }
   @keyframes scrollPulse { 0%,100%{opacity:0.4} 50%{opacity:1} }
+
+  .orb {
+    position: absolute !important;
+    z-index: 1;
+    border-radius: 50%;
+    filter: blur(60px);
+    pointer-events: none;
+}
+
+.floating-cards {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.floating-cards .card {
+    position: absolute !important;
+    display: block;
+    font-size: 2.5rem;
+    filter: drop-shadow(0 0 20px rgba(3, 227, 252, 0.6));
+    animation: cardFloat 4s infinite ease-in-out;
+    animation-delay: calc(var(--i) * 0.2s);
+}
+
+@keyframes cardFloat {
+  0%   { transform: translateY(0px) rotate(0deg); }
+  50%  { transform: translateY(-18px) rotate(4deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
 
   /* ── STATS STRIP ── */
   .stats-strip {
@@ -381,10 +446,12 @@
   .section-divider {
     position: relative;
     z-index: 10;
-    width: 50%;
-    height: 0.5px;
+    width: 60%;
+    height: 1px;
     margin: 0 auto;
-    background: linear-gradient(90deg, transparent, rgba(3,227,252,0.4), transparent);
+    background: linear-gradient(90deg, transparent, rgba(3,227,252,0.8), transparent);
+    box-shadow: 0 0 10px rgba(3,227,252,0.25);
+    opacity: 0.9;
   }
 
   /* ── SECTIONS ── */
@@ -403,7 +470,7 @@
     letter-spacing: 4px;
     text-transform: uppercase;
     color: var(--cyan);
-    border: 0.5px solid var(--cyan-border);
+    border: 2px solid var(--cyan);
     background: var(--cyan-dim);
     display: inline-block;
     padding: 5px 16px;
@@ -427,6 +494,14 @@
     font-weight: 300;
     line-height: 1.9;
     max-width: 560px;
+  }
+
+  /* ── Vision ── */
+  #vision {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   /* ── ABOUT ── */
@@ -820,7 +895,6 @@
     <a class="nav-brand" href="#">
       <div class="nav-logo-mark">CoM</div>
       <div class="nav-text">
-        <div class="nav-eyebrow">Est. 2025 · Abu Dhabi</div>
         <div class="nav-name">Collegium of Minds</div>
       </div>
     </a>
@@ -839,14 +913,15 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-est">Est. 2025 · Abu Dhabi, UAE · DIS</div>
-  <div class="hero-badge">A community for curious thinkers and lifelong learners.</div>
+  <div class="orb" style="width:400px; height:400px; left:10%; top:20%; background: radial-gradient(circle, #03e3fc40 0%, transparent 70%); animation: float1 20s infinite alternate;"></div>
+  <div class="orb" style="width:300px; height:300px; left:80%; top:60%; background: radial-gradient(circle, #03fca540 0%, transparent 70%); animation: float2 25s infinite alternate;"></div>
+  <div class="hero-badge">Est. 2025</div>
   <h1 class="hero-h1">
-    <span class="line1">THINK</span>
-    <span class="line2">Create. Discover.</span>
+    <span class="line1">The Collegium</span>
+    <span class="line2">Of Minds</span>
   </h1>
   <p class="hero-sub">
-    The Collegium of Minds welcomes individuals passionate about exploring science 🔬, mathematics ➗, philosophy 🧠, literature 📚, history 🏛️, technology 💻, arts 🎨, and beyond. Here, ideas are shared, questions are celebrated, and minds come together to discover, discuss, and innovate 💡.
+    A community for curious thinkers and lifelong learners.
   </p>
   <div class="hero-ctas">
     <a href="#projects" class="btn-primary">Explore Ideas →</a>
@@ -856,7 +931,16 @@
     <div class="scroll-line"></div>
     Scroll to explore
   </div>
+
+  <div class="floating-cards">
+    <div class="card" style="--i:1; left:5%; top:25%;">🔬</div>
+    <div class="card" style="--i:2; left:95%; top:35%;">⚛️</div>
+    <div class="card" style="--i:3; left:10%; top:75%;">🧬</div>
+    <div class="card" style="--i:4; left:90%; top:70%;">🚀</div>
+  </div>
 </section>
+
+<br><br>
 
 <!-- STATS -->
 <div class="stats-strip reveal">
@@ -879,6 +963,18 @@
     </div>
   </div>
 </div>
+
+<div class="section-divider"></div>
+
+<section id="vision" style="text-align:center;">
+    <div class="section-tag">The Vision</div>
+    <h2 class="section-heading">Think. Explore. Discover.</h2>
+    <p class="section-body">
+      The Collegium of Minds welcomes individuals passionate about exploring science 🔬, mathematics ➗, philosophy 🧠, literature 📚, history 🏛️, technology 💻, arts 🎨, and beyond. Here, ideas are shared, questions are celebrated, and minds come together to discover, discuss, and innovate 💡.
+    </p>
+    <br><br>
+    <a href="#about" class="btn-primary" style="display:inline-flex;">More About Us</a>
+</section>
 
 <div class="section-divider"></div>
 
@@ -1187,9 +1283,9 @@
 <footer>
   <div class="footer-inner">
     <div>
-      <div class="footer-brand-name">Collegium of Minds</div>
-      <div class="footer-school">Dunes International School · Abu Dhabi, UAE</div>
-      <p class="footer-desc">An open intellectual space for curious thinkers and lifelong learners. Founded 2025–26.</p>
+      <div class="footer-brand-name">The Collegium of Minds 🧠✨</div>
+      <div class="footer-school">Think. Explore. Discover.</div>
+      <p class="footer-desc">A community for curious thinkers and lifelong learners.</p>
     </div>
     <div>
       <div class="footer-col-title">Explore</div>
@@ -1212,7 +1308,7 @@
   </div>
   <div class="footer-bottom">
     <div class="footer-copy">© 2026 Collegium of Minds. All rights reserved.</div>
-    <div class="footer-tagline">Built with <span>❤</span> at Dunes International School</div>
+    <div class="footer-tagline"><span>🔴</span> System Calibrating. Site under construction.</div>
   </div>
 </footer>
 
