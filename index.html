@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Collegium of Minds</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;1,300&family=Orbitron:wght@400;700;800;900&display=swap" rel="stylesheet">
+<title>The Collegium of Minds</title>
+<link rel="icon" href="Comm.png" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
     --cyan: #03e3fc;
@@ -138,16 +139,11 @@
   .nav-brand:hover { transform: scale(1.05);}
 
   .nav-logo-mark {
-    width: 38px; height: 38px;
-    border: 1px solid var(--cyan-border);
-    border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 0.75rem;
-    font-weight: 800;
-    color: var(--cyan);
-    background: var(--cyan-dim);
-    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: transform 0.3s;
   }
 
   .nav-text { display: flex; flex-direction: column; gap: 1px}
@@ -625,6 +621,8 @@
     transition: all 0.35s;
     display: flex;
     flex-direction: column;
+    text-decoration: none;
+    color: inherit;
   }
   .project-card:hover { background: var(--surface-hover); border-color: var(--cyan); transform: translateY(-4px); }
   .project-card.featured { grid-column: span 2; background: linear-gradient(135deg, rgba(3,227,252,0.05), rgba(3,252,165,0.03)); border-color: rgba(3,227,252,0.35); }
@@ -662,6 +660,8 @@
   .status-dot { width: 6px; height: 6px; border-radius: 50%; }
   .dot-planning { background: var(--cyan); box-shadow: 0 0 8px var(--cyan); }
   .dot-idea { background: rgba(255,255,255,0.3); }
+
+  .library-btn {align-items: center}
 
   /* ── EVENTS ── */
   .events-layout {
@@ -892,8 +892,10 @@
 <!-- NAV -->
 <nav id="navbar">
   <div class="nav-inner">
-    <a class="nav-brand" href="#">
-      <div class="nav-logo-mark">CoM</div>
+    <a class="nav-brand" href="index.html">
+      <div class="nav-logo-mark">
+        <img src="Comm.png" style="width:30px; height:30px;">
+      </div>
       <div class="nav-text">
         <div class="nav-name">Collegium of Minds</div>
       </div>
@@ -901,7 +903,7 @@
     <ul class="nav-links" id="navLinks">
       <li><a href="#about">About</a></li>
       <li><a href="#questions">Questions</a></li>
-      <li><a href="#projects">Projects</a></li>
+      <li><a href="#library">Library</a></li>
       <li><a href="#events">Events</a></li>
       <li><a href="#join" class="nav-cta">Join CoM</a></li>
     </ul>
@@ -967,6 +969,7 @@
 <div class="section-divider"></div>
 
 <section id="vision" style="text-align:center;">
+  <div class="reveal">
     <div class="section-tag">The Vision</div>
     <h2 class="section-heading">Think. Explore. Discover.</h2>
     <p class="section-body">
@@ -974,6 +977,7 @@
     </p>
     <br><br>
     <a href="#about" class="btn-primary" style="display:inline-flex;">More About Us</a>
+  </div>
 </section>
 
 <div class="section-divider"></div>
@@ -983,7 +987,7 @@
   <div class="about-layout">
     <div class="reveal">
       <div class="section-tag">About</div>
-      <h2 class="section-heading">Curiosity rather than conformity.</h2>
+      <h2 class="section-heading">Curiosity over conformity.</h2>
       <p class="section-body">
         The Collegium of Minds is not just a club—it is an open intellectual space for anyone driven by curiosity rather than conformity. It exists for those who believe that learning is a lifelong process, and that the most meaningful questions often have no immediate or final answers.
         <br><br>
@@ -995,6 +999,7 @@
       <a href="#join" class="btn-primary" style="display:inline-flex;">Get Involved →</a>
     </div>
     <div class="about-visual reveal">
+      <div class="section-tag">Our Societies</div>
       <div class="about-grid">
         <div class="about-tile">
           <span class="tile-icon">🧠</span>
@@ -1062,31 +1067,31 @@
 <div class="section-divider"></div>
 
 <!-- PROJECTS -->
-<section id="projects">
+<section id="library">
   <div class="projects-header reveal">
     <div>
-      <div class="section-tag">Projects</div>
-      <h2 class="section-heading">What we're building</h2>
+      <div class="section-tag">Library</div>
+      <h2 class="section-heading">What we're thinking</h2>
     </div>
-    <p style="color: var(--muted); font-size: 0.82rem; max-width: 280px; line-height: 1.7; font-weight: 300; text-align: right;">Early-stage ideas and placeholders — the real projects start once you join.</p>
+    <p style="color: var(--muted); font-size: 0.82rem; max-width: 280px; line-height: 1.7; font-weight: 300; text-align: right;">Ideas and articles from our members — join us to show everyone yours as well!</p>
   </div>
 
   <div class="projects-grid reveal">
-    <div class="project-card featured">
-      <div class="project-chip chip-blue">Flagship · In Planning</div>
-      <div class="project-title">ChatDIS</div>
+    <a href="library.html" class="project-card featured">
+      <div class="project-chip chip-blue">Category</div>
+      <div class="project-title">Article 1</div>
       <div class="project-body">
-        An experimental AI interface exploring how educational systems could become more accessible, intelligent, and conversational — built on natural language and verified knowledge infrastructure.
+        Description
         <br><br>
-        <em style="font-size:0.8rem; color: var(--dimmer);">Placeholder — details take shape once the team forms.</em>
+        <em style="font-size:0.8rem; color: var(--dimmer);">Extra info about it</em>
       </div>
       <div class="project-footer">
-        <div class="project-members">Looking for: AI / Dev / Design</div>
-        <div class="project-status"><div class="status-dot dot-planning"></div> Planning phase</div>
+        <div class="project-members">Members (if applicable)</div>
+        <div class="project-status"><div class="status-dot dot-planning"></div>Phase (Planning, deployment, etc)</div>
       </div>
-    </div>
+    </a>
 
-    <div class="project-card">
+    <a href="library.html" class="project-card">
       <div class="project-chip chip-green">Environment</div>
       <div class="project-title">Eco Drone Concept</div>
       <div class="project-body">A student-designed drone concept for environmental monitoring — air quality, heat mapping, and sustainability tracking across campus and beyond.</div>
@@ -1094,9 +1099,9 @@
         <div class="project-members">Open roles</div>
         <div class="project-status"><div class="status-dot dot-idea"></div> Idea stage</div>
       </div>
-    </div>
+    </a>
 
-    <div class="project-card">
+    <a href="library.html" class="project-card">
       <div class="project-chip chip-violet">Design</div>
       <div class="project-title">Mars Habitat Sim</div>
       <div class="project-body">A 3D simulation of what a sustainable Mars colony might look like — resource management, architecture, life support systems.</div>
@@ -1104,9 +1109,9 @@
         <div class="project-members">Open roles</div>
         <div class="project-status"><div class="status-dot dot-idea"></div> Idea stage</div>
       </div>
-    </div>
+    </a>
 
-    <div class="project-card">
+    <a href="library.html" class="project-card">
       <div class="project-chip chip-amber">Hardware</div>
       <div class="project-title">Open Hardware Lab</div>
       <div class="project-body">A shared inventory of Arduino kits, sensors, and components for club members to use on any project. Open to all skill levels.</div>
@@ -1114,9 +1119,9 @@
         <div class="project-members">All welcome</div>
         <div class="project-status"><div class="status-dot dot-planning"></div> Planning phase</div>
       </div>
-    </div>
+    </a>
 
-    <div class="project-card">
+    <a href="#join" class="project-card">
       <div class="project-chip chip-pink">Open</div>
       <div class="project-title">Your Project Here</div>
       <div class="project-body">Got an idea? Bring it. If it solves a real problem or pushes a boundary, we'll help you build a team around it.</div>
@@ -1124,9 +1129,17 @@
         <div class="project-members">Pitch it to us</div>
         <div class="project-status"><div class="status-dot dot-idea"></div> Open to ideas</div>
       </div>
-    </div>
+    </a>
+  </div>
+  <br>
+  <br>
+  <div style="text-align:center;" class="reveal">
+    <a href="library.html" class="btn-primary" style="display:inline-flex;">
+      Read More →
+    </a>
   </div>
 </section>
+
 
 <div class="section-divider"></div>
 
@@ -1246,17 +1259,19 @@
         <input class="form-input" type="text" placeholder="Your name">
       </div>
       <div class="form-row">
-        <label>Student Email</label>
-        <input class="form-input" type="email" placeholder="your.name@dunes.ae">
+        <label>Email</label>
+        <input class="form-input" type="email" placeholder="example@gmail.com">
       </div>
       <div class="form-row">
-        <label>Year / Grade</label>
+        <label>What do you do?</label>
         <select class="form-select form-input">
-          <option value="" disabled selected>Select your grade</option>
-          <option>Grade 9</option>
-          <option>Grade 10</option>
-          <option>Grade 11</option>
-          <option>Grade 12</option>
+          <option value="" disabled selected>Select your occupation</option>
+          <option>Student (Elementary School)</option>
+          <option>Student (Middle School)</option>
+          <option>Student (High School)</option>
+          <option>Student (College/University)</option>
+          <option>Professional</option>
+          <option>Rather not tell</option>
           <option>Other</option>
         </select>
       </div>
@@ -1292,7 +1307,7 @@
       <ul class="footer-links">
         <li><a href="#about">About CoM</a></li>
         <li><a href="#questions">Questions We Ask</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="#library">Library</a></li>
         <li><a href="#events">Events</a></li>
       </ul>
     </div>
