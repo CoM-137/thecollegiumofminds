@@ -501,6 +501,8 @@
   }
 
   /* ── ABOUT ── */
+
+  /*
   .about-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -526,6 +528,92 @@
   .tile-icon { font-size: 1.6rem; display: block; margin-bottom: 14px; }
   .tile-title { font-family: 'Orbitron', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.5px; color: var(--text); margin-bottom: 10px; }
   .tile-body { font-size: 0.82rem; font-weight: 300; color: var(--dimmer); line-height: 1.6; }
+*/
+
+  /* ── ABOUT ── */
+  .about-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  /* NEW TITLE CARD */
+  .about-heading-tile {
+    grid-column: span 2;
+    background: linear-gradient(
+      135deg,
+      rgba(3,227,252,0.08),
+      rgba(3,252,165,0.04)
+    );
+    border: 1px solid rgba(3,227,252,0.25);
+    border-radius: 18px;
+    padding: 22px 24px;
+  }
+
+  .about-heading-tile h3 {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    color: var(--cyan);
+    letter-spacing: 1px;
+  }
+
+  .about-heading-tile p {
+    margin-top: 10px;
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+
+  /* SMALLER CARDS */
+  .about-tile {
+    background: var(--surface);
+    border: 0.5px solid var(--cyan-border);
+    border-radius: 16px;
+    padding: 18px 18px;
+    transition: all 0.3s;
+  }
+
+  .about-tile:hover {
+    background: var(--surface-hover);
+    border-color: var(--cyan);
+    transform: translateY(-3px);
+  }
+
+  /* ICON + TITLE INLINE */
+  .tile-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .tile-icon {
+    font-size: 1.1rem;
+    line-height: 1;
+  }
+
+  .tile-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    color: var(--text);
+  }
+
+  .tile-body {
+    font-size: 0.76rem;
+    font-weight: 300;
+    color: var(--dimmer);
+    line-height: 1.5;
+  }
 
   /* ── QUESTIONS ── */
   #questions { padding: 80px 32px; max-width: 1200px; margin: 0 auto; }
@@ -1002,24 +1090,70 @@
       <div class="section-tag">Our Societies</div>
       <div class="about-grid">
         <div class="about-tile">
-          <span class="tile-icon">🧠</span>
-          <div class="tile-title">Intellectual Exploration</div>
-          <div class="tile-body">Philosophy, psychology, systems thinking, and the questions that resist easy answers.</div>
+          <div class="tile-body" style="color:var(--text); font-size: 1.15rem; font-family: 'Orbitron', sans-serif; background: linear-gradient(to right, #03e3fc, #03fca5);-webkit-background-clip: text; -webkit-text-fill-color: transparent;">Explore our societies and find the one that matches your</div><div class="tile-body" style="color:var(--text); font-size: 1.4rem; font-family: 'Orbitron', sans-serif; background: linear-gradient(to right, #03e3fc, #03fca5);-webkit-background-clip: text; -webkit-text-fill-color: transparent; font-style: italic; font-weight: bold;">interests</div>.
         </div>
         <div class="about-tile">
-          <span class="tile-icon">🤖</span>
-          <div class="tile-title">Artificial Intelligence</div>
-          <div class="tile-body">AI systems, machine learning, ethics, and human–machine futures.</div>
+          <div class="tile-header">
+            <span class="tile-icon">🚀</span>
+            <div class="tile-title">Physics</div>
+          </div>
+          <div class="tile-body">Explore the laws that govern reality—from motion and energy to relativity, quantum mechanics, and the mysteries of the universe.</div>
         </div>
         <div class="about-tile">
-          <span class="tile-icon">🚀</span>
-          <div class="tile-title">Space & Science</div>
-          <div class="tile-body">Astrophysics, simulations, and science-driven exploration of the cosmos.</div>
+          <div class="tile-header">
+          <span class="tile-icon">🧪</span>
+            <div class="tile-title">Chemistry</div>
+          </div>
+          <div class="tile-body">Dive into the science of matter, reactions, atoms, molecules, and the hidden interactions shaping the world around us.</div>
         </div>
         <div class="about-tile">
-          <span class="tile-icon">⚒️</span>
-          <div class="tile-title">Innovation & Engineering</div>
-          <div class="tile-body">Building ideas into real systems, products, and solutions.</div>
+          <div class="tile-header">
+            <span class="tile-icon">🧬</span>
+            <div class="tile-title">Biology</div>
+          </div>
+          <div class="tile-body">Discuss life in all its forms—from cells and genetics to evolution, ecosystems, and the complexity of living systems.</div>
+        </div>
+        <div class="about-tile">
+          <div class="tile-header">
+            <span class="tile-icon">➗</span>
+            <div class="tile-title">Mathematics</div>
+          </div>
+          <div class="tile-body">A space for logic, patterns, problem-solving, proofs, and the language that underlies science and the universe itself.</div>
+        </div>
+        <div class="about-tile">
+          <div class="tile-header">
+            <span class="tile-icon">🤔</span>
+            <div class="tile-title">Philosophy</div>
+          </div>
+          <div class="tile-body">Question existence, consciousness, morality, reality, and the deeper ideas that shape human thought and understanding.</div>
+        </div>
+        <div class="about-tile">
+          <div class="tile-header">
+            <span class="tile-icon">💻</span>
+            <div class="tile-title">Technology</div>
+          </div>
+          <div class="tile-body">Explore innovation, programming, AI, engineering, cybersecurity, future tech, and the systems shaping tomorrow.</div>
+        </div>
+        <div class="about-tile">
+          <div class="tile-header">
+            <span class="tile-icon">🌌</span>
+            <div class="tile-title">Cosmology</div>
+          </div>
+          <div class="tile-body">Discuss the universe on the grandest scales—space, black holes, dark matter, origins of the cosmos, and beyond.</div>
+        </div>
+        <div class="about-tile">
+          <div class="tile-header">
+            <span class="tile-icon">🏛️</span>
+            <div class="tile-title">Social Sciences</div>
+          </div>
+          <div class="tile-body">Explore history, geography, politics, economics, civilizations, and the forces that shape societies and humanity.</div>
+        </div>
+        <div class="about-tile">
+          <div class="tile-header">
+            <span class="tile-icon">🎨📚</span>
+            <div class="tile-title">Arts & Literature</div>
+          </div>
+          <div class="tile-body">A space for creativity, expression, storytelling, poetry, visual arts, music, and the ideas carried through art and writing.</div>
         </div>
       </div>
     </div>
