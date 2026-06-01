@@ -298,7 +298,9 @@
     }
     .article-meta { 
       font-size:0.85rem; 
-      color:#45a29e; 
+      background: linear-gradient(to right, #03e3fc, #03fca5);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
       margin:0.2rem 0;
     }
 
@@ -335,6 +337,15 @@
     .full-article p {
         font-size: 1.1rem;
         margin-bottom: 20px;
+    }
+
+    .full-article p.author {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        font-weight:bold;
+         background: linear-gradient(to right, #03e3fc, #03fca5);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
     }
 
     /* Bibliography links */
@@ -513,24 +524,24 @@
 
 <!-- Article Grid -->
 <div class="article-grid" id="articleGrid">
-  <div class="article-card" data-id="article1">
-    <h3>Is Gravity An Illusion?</h3>
-    <p class="article-meta">Oct 17, 2025 — Medium · 17 min read</p>
-    <p>An explanatory article that explores the true nature of gravity by using Einstein’s General Theory of Relativity</p>
+  <div class="article-card" data-id="article3">
+    <h3>The Secrets of Game Design (Part 1)</h3>
+    <p class="article-meta">May 16, 2026 · Joel Mendonca</p>
+    <p>This article is part of a series exploring the secrets of game design: the techniques that shape how games keep players engaged, motivated, and coming back for more.</p>
   </div>
 
   <div class="article-card" data-id="article2">
     <h3>Traveling Faster Than Light?</h3>
-    <p class="article-meta">Nov 1, 2025 — Medium · 15 min read</p>
+    <p class="article-meta">Nov 1, 2025 · Sarvesh Kore</p>
     <p>A brief article on how real physics and speculative theories like the Alcubierre drive and Tri-Space model could make faster-than-light travel conceivable.</p>
   </div>
 
-  <div class="article-card" data-id="article3">
-    <h3>Energy Isn’t Universally Conserved</h3>
-    <p class="article-meta">Nov 4, 2025 — Medium · 14 min read</p>
-    <p>A conceptual article that examines why energy, though conserved locally, fails to be conserved globally in an expanding and curved universe, according to General Relativity.</p>
+  <div class="article-card" data-id="article1">
+    <h3>Is Gravity An Illusion?</h3>
+    <p class="article-meta">Oct 17, 2025 · Sarvesh Kore</p>
+    <p>An explanatory article that explores the true nature of gravity by using Einstein’s General Theory of Relativity</p>
   </div>
-
+<!--
   <div class="article-card" data-id="article4">
     <h3>Is Our Universe A Hologram?</h3>
     <p class="article-meta">Nov 13, 2025 — Medium · 5 min read</p>
@@ -542,6 +553,7 @@
     <p class="article-meta">Nov 23, 2025 — Medium · 17 min read</p>
     <p>An exploration of how a single physical principle drives the Universe’s evolution, shaping time, complexity, and every process that unfolds around us.</p>
   </div>
+-->
 
   <div class="article-card" data-id="article6">
     <h3>Is Our Universe Really An Isolated System?</h3>
@@ -554,7 +566,7 @@
 <div class="full-article" id="article1">
   <a class="back-btn">← Back</a>
   <h2>Is Gravity An Illusion?</h2>
-  <p class="article-meta">Oct 17, 2025 — Medium · 17 min read</p>
+  <p class="article-meta">Date published: Oct 17, 2025</p>
  
   <h2>I. Introduction</h2>
   <p>Gravity feels simple. You drop something, it falls. You jump, you come back down. The apple falls from the tree. Earth pulls you toward its center. That’s what we all learned. But if you really think about it, there’s something strange. Why does everything fall at the same rate, even though it has different masses? Why do astronauts float in space, even though Earth’s pull is still strong up there?</p>
@@ -651,14 +663,14 @@
     <li><a href="https://www.youtube.com/watch?v=XRr1kaXKBsU&vl=en" target="_blank">What everyone gets wrong about gravity — Veritasium (YouTube)</a>: Best available explanation on this topic on YouTube so far.</li>
   </ul>
   
-  <p>Authored by: Sarvesh Kore, Grade 9B, Dunes International School, Abu Dhabi (2025)</p>
+  <p class="author">Authored by: Sarvesh Kore</p>
 </div>
 
 
 <div class="full-article" id="article2">
     <a class="back-btn">← Back</a>
-
     <h2>Traveling Faster Than Light</h2>
+    <p class="article-meta">Date published: Nov 1, 2025</p>
 
     <h2>I. Introduction</h2>
     <p>Ever since humans first looked up at the stars, we’ve wondered how to reach them. The problem is simple in theory but stubborn in practice: the universe has a speed limit. According to Einstein’s theory of relativity, nothing with mass can travel at the speed of light or faster because it would require infinite energy to accelerate to it, which makes interstellar travel seem almost impossible.</p>
@@ -820,15 +832,22 @@
     <p>Fractalverse Wiki (Community-maintained).</p>
     <p><a href="https://fractalverse.net/explore-the-universe/ftl-travel/" target="_blank">https://fractalverse.net/explore-the-universe/ftl-travel/</a></p>
 
-    <p>Authored by: Sarvesh Kore, Grade 9B, Dunes International School, Abu Dhabi (2025)</p>
+    <p class="author">Authored by: Sarvesh Kore</p>
 </div>
 
 
 <div class="full-article" id="article3">
   <a class="back-btn">← Back</a>
-  <h2>Energy Isn’t Universally Conserved</h2>
-  <p class="article-meta">Nov 4, 2025 — Medium · 14 min read</p>
-  <p>In expanding, curved spacetime energy conservation holds locally but lacks a universal definition — a cosmic twist on a fundamental law. :contentReference[oaicite:20]{index=20}</p>
+  <h2>The Secrets of Game Design (Part 1)</h2>
+  <p class="article-meta">Date published: May 16, 2026</p>
+  <p>Have you ever played a game for ‘just 5 minutes’ and ended up playing for hours? What makes video games so addictive, regardless of the available features? Today, I'll be sharing the secrets of game design that almost every dev uses to create long lasting and addictive gameplay.</p>
+  <p>Let's start with the simplest yet most effective systems, the gameloop. In simple terms, a gameloop is when players work on a goal, achieve the goal, and get rewarded. In RPG/Adventure based games, the goal is simply provided by the game itself. However, in sandbox games, you, the player, are meant to create your own minigoals and try to achieve them. A good game gives clean instructions or hints on the goal to be achieved, reducing confusion, making players spend hours on that game. After completing the goal, the player must get a reward. This is the most important part, as it decides if the player must spend their time completing the task. Some devs use a technique called "high risk, high reward", which, as the name suggests, makes the goal extremely risky, which upon completion, gives a very big reward. The gameloop must also be simple, and mustn't change drastically throughout gameplay stages. An example of this is Geometry Dash. In this game, regardless of your skill level, the main gameloop is to jump and avoid hitting obstacles. The loop is very easy to understand, but hard to master, making this a perfect example for a gameloop.</p>
+  <p>However, a good gameplay loop alone is not enough to keep players engaged for months or even years. This leads us to our second technique in game design, the progression system. This simple, yet powerful system is the key factor to any game's success. The way this works is as follows. Every player starts at the lowest level or status. Gradually, after unlocking certain objectives or completing certain tasks, the player's level/status must evolve based on their skill. Simple, right? However, the main thing that separates a bad progression system from an addictive one is the way dev's implement it. Let's talk about flow state for a second, as it's an important factor for a good progression system. Flow state is a mental state where a person's mind enters a deep focus mode. In order to achieve this, the person must balance the task difficulty. Making the task too easy results in boredom, and making it too hard results in frustration. A good game developer needs to learn how to balance the person's mood based on their level/status in the game. For dev's that are just starting on video game design, a good way to test it is to create a prototype as fast as possible, and send it to different people without any guidance. Then, watch how the players react to different mechanics, and note down which ones they like, which ones they don't, and which ones they get obsessed with. This only comes through years of experience, so don't feel discouraged if someone doesn't like your game idea.</p>
+  <p>These above tips, however, only work when you have a clear game idea. if you're struggling to find good ideas for your game, the below tips will help. First, start brainstorming on your favorite game genre. My personal favorite is the sandbox genre. After that, do some research on the popularity of the genre. You may open steam or itch.io, and search up the genre. After this, try to mix different genres to create your game idea. For example, let's say you love horror games, but the current trend is sandbox. In that case, you can create an Open-World Horror RPG where a player is stuck in a liminal space and their goal is to create solutions on how to escape. The idea for my long-term project, Build, came when I first stumbled upon cookie clicker, and thought if I could merge an idle-based game with my favorite genre at the time, sandbox. Another thing that beginners tend to do is to overscope their idea. You must never overscope your game idea. Always start small, get immediate player feedback, and gradually add features.</p>
+  <p>This thought led to something profound: These two cases — the free falling man, and the man in deep space — are not just similar, they are exactly the same thing. This is what’s known as the Equivalence Principle.</p>
+  <p>Game designing can never be taught by anyone. It comes from years of experience. I hope the above game designing techniques gave you all a good starting point and maybe inspired you to create your own games. Good luck on your gamedev journey!!</p>
+  
+  <p class="author">Authored by: Joel Mendonca</p>
 </div>
 
 <div class="full-article" id="article4">

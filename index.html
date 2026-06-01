@@ -817,7 +817,7 @@
     align-items: start;
   }
 
-  .join-perks { display: flex; flex-direction: column; gap: 28px; margin-top: 40px; }
+  .join-perks { display: flex; flex-direction: column; gap: 15px; margin-top: 40px; }
 
   .perk { display: flex; gap: 18px; align-items: flex-start; }
   .perk-icon {
@@ -878,6 +878,35 @@
     margin-top: 8px;
   }
   .form-submit:hover { background: rgba(3,227,252,0.2); box-shadow: 0 0 20px rgba(3,227,252,0.1); }
+
+
+  .join-inner {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 50px;
+    align-items: start;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  .join-info {
+      position: sticky;
+      top: 100px;
+  }
+
+  .join-form {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(3,227,252,0.2);
+      border-radius: 20px;
+      padding: 20px;
+  }
+
+  .join-form iframe {
+      width: 100%;
+      border: none;
+      border-radius: 12px;
+  }
 
   /* ── FOOTER ── */
   footer {
@@ -1036,7 +1065,7 @@
 <div class="stats-strip reveal">
   <div class="stats-inner">
     <div class="stat-cell">
-      <span class="stat-num">8+</span>
+      <span class="stat-num">9+</span>
       <div class="stat-label">Months</div>
     </div>
     <div class="stat-cell">
@@ -1212,12 +1241,12 @@
 
   <div class="projects-grid reveal">
     <a href="library.html" class="project-card featured">
-      <div class="project-chip chip-blue">Category</div>
-      <div class="project-title">Article 1</div>
+      <div class="project-chip chip-blue">Technology</div>
+      <div class="project-title">The Secret Behind Game Design (PART 1)</div>
       <div class="project-body">
-        Description
+        by Joel Mendonca
         <br><br>
-        <em style="font-size:0.8rem; color: var(--dimmer);">Extra info about it</em>
+        <em style="font-size:0.8rem; color: var(--dimmer);">This article is part of a series exploring the secrets of game design: the techniques, systems, and psychological tricks that shape how games keep players engaged, motivated, and coming back for more. From progression systems to player psychology, we'll uncover the methods that game developers use that nobody tells you about.</em>
       </div>
       <div class="project-footer">
         <div class="project-members">Members (if applicable)</div>
@@ -1277,7 +1306,7 @@
 
 <div class="section-divider"></div>
 
-<!-- EVENTS -->
+<!-- EVENTS --
 <section id="events">
   <div class="events-layout">
     <div class="events-list reveal">
@@ -1351,80 +1380,68 @@
 </section>
 
 <div class="section-divider"></div>
+-->
 
 <!-- JOIN -->
 <section id="join">
   <div class="join-inner">
-    <div class="reveal">
+
+    <div class="join-info">
+
       <div class="section-tag">Join</div>
-      <h2 class="section-heading">Be part of something new.</h2>
+
+      <h2 class="section-heading">
+        Become a founding member.
+      </h2>
+
       <p class="section-body">
-        We're in our founding year, which means you won't just join a club — you'll help shape it. Every role, event, and project we build from here will carry your fingerprints.
+        CoM is still in its earliest stage. Every member who joins now
+        helps define its culture, projects, and future direction.
       </p>
+
       <div class="join-perks">
+
         <div class="perk">
-          <div class="perk-icon blue">🛠</div>
-          <div>
-            <div class="perk-title">Build real things</div>
-            <div class="perk-body">Work on projects that actually ship — from AI tools to hardware prototypes.</div>
-          </div>
+          🔍 Explore Ideas
         </div>
+
         <div class="perk">
-          <div class="perk-icon violet">🤝</div>
-          <div>
-            <div class="perk-title">Find your people</div>
-            <div class="perk-body">Meet students who think like you — curious, ambitious, and unafraid to try things.</div>
-          </div>
+          🤝 Meet curious thinkers
         </div>
+
         <div class="perk">
-          <div class="perk-icon cyan">🌍</div>
-          <div>
-            <div class="perk-title">Compete & showcase</div>
-            <div class="perk-body">Represent DIS at hackathons, exhibitions, and innovation challenges across the region.</div>
-          </div>
+          💡 Ask Better Questions
         </div>
+
+        <div class="perk">
+          ❓ Questions & Challenges
+        </div>
+
+        <div class="perk">
+          🧠 Intellectual Discussions
+        </div>
+
+        <div class="perk">
+          🗣️ Debate & Discourse
+        </div>
+
+        <div class="perk">
+          🌍 Diverse Perspectives
+        </div>
+
       </div>
+
     </div>
 
-    <div class="join-form reveal">
-      <div class="form-title">Express Interest</div>
-      <div class="form-row">
-        <label>Full Name</label>
-        <input class="form-input" type="text" placeholder="Your name">
-      </div>
-      <div class="form-row">
-        <label>Email</label>
-        <input class="form-input" type="email" placeholder="example@gmail.com">
-      </div>
-      <div class="form-row">
-        <label>What do you do?</label>
-        <select class="form-select form-input">
-          <option value="" disabled selected>Select your occupation</option>
-          <option>Student (Elementary School)</option>
-          <option>Student (Middle School)</option>
-          <option>Student (High School)</option>
-          <option>Student (College/University)</option>
-          <option>Professional</option>
-          <option>Rather not tell</option>
-          <option>Other</option>
-        </select>
-      </div>
-      <div class="form-row">
-        <label>What interests you most?</label>
-        <select class="form-select form-input">
-          <option value="" disabled selected>Pick one</option>
-          <option>Artificial Intelligence / ML</option>
-          <option>Robotics & Hardware</option>
-          <option>Space & Science</option>
-          <option>App / Web Development</option>
-          <option>Philosophy & Humanities</option>
-          <option>Design & Creative Tech</option>
-          <option>Not sure yet — just curious</option>
-        </select>
-      </div>
-      <button class="form-submit" onclick="alert('Thanks for your interest! We\'ll reach out soon 🚀')">Submit Expression of Interest →</button>
-      <p style="font-size:0.72rem; color: var(--dimmer); text-align:center; margin-top:14px; font-weight:300;">No commitments yet — just let us know you're interested.</p>
+    <div class="join-form">
+
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSfBE1mrrINeO_e-ZWEUQMgKJ0_H092IQ1NuFiA3A05PTUJg6A/viewform?embedded=true"
+        height="900">
+      </iframe>
+
     </div>
+
   </div>
 </section>
 
@@ -1562,6 +1579,17 @@
     const hero = document.querySelector('.hero');
     if (hero) hero.style.transform = `translateY(${y * 0.08}px)`;
   });
+
+  window.addEventListener("load", () => {
+    if (window.location.hash) {
+        history.replaceState(
+            null,
+            document.title,
+            window.location.pathname + window.location.search
+        );
+    }
+  });
+
 </script>
 </body>
 </html>
